@@ -98,22 +98,32 @@
     document.getElementById("signup-form").addEventListener("submit", function(e) {
       e.preventDefault();
       const email = document.getElementById("signup-email").value;
+      
+      console.log('Attempting to send email to:', BACKEND_URL);
 
       fetch(`${BACKEND_URL}/signup`, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Accept": "application/json"
         },
         body: JSON.stringify({ email: email })
       })
-      .then(response => response.json())
+      .then(response => {
+        console.log('Response status:', response.status);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
+        console.log('Success:', data);
         alert("Thanks for signing up with " + email);
         document.getElementById("signup-email").value = "";
       })
       .catch(error => {
-        console.error("Error:", error);
-        alert("There was an error signing up. Please try again later.");
+        console.error("Error details:", error);
+        alert("There was an error signing up. Please try again later. Error: " + error.message);
       });
     });
   </script>
