@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get in Touch - Interactive</title>
+
+  <!-- Font Inter + style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="logo">
+      <a href="index.html" class="home-link">
+        <img src="assets/logo.svg" alt="Interactive Logo" width="40" height="40">
+        <span>Interactive</span>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="careers.html">Careers</a></li>
+        <!-- Pagina attiva: contacts.html -->
+        <li><a href="contacts.html" style="font-weight:600;">Get in Touch</a></li>
+        <li><a href="landing.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SPECIFICO -->
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <h1>Get In Touch</h1>
+      <p>We’re here to help! Reach out with any questions or feedback you may have.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="contact-info-section">
+    <div class="contact-info-container">
+      <!-- Blocco “Contact” -->
+      <div class="contact-block">
+        <h2>Contact</h2>
+        <p>Reach out to us for any inquiries or support.</p>
+        <a href="mailto:theoboettcher@gmail.com">theoboettcher@gmail.com</a>
+      </div>
+
+      <!-- Blocco “Phone” -->
+      <div class="contact-block">
+        <h2>Phone</h2>
+        <p>We’re here to assist you with any questions.</p>
+        <a href="tel:+393937237988">+39 393 723 7988</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="final-section">
+    <div class="brand-subscribe">
+      <div class="brand-block">
+        <div class="brand-icon">
+          <img src="assets/logo.svg" alt="Icon" width="60" height="60">
+        </div>
+        <div class="brand-text">
+          Interactive
+        </div>
+      </div>
+
+      <div class="subscribe-block">
+        <label for="subscribe-email">Subscribe</label>
+        <div class="subscribe-row">
+          <!-- Bottone => landing.html -->
+          <input type="email" id="subscribe-email" placeholder="Enter your email">
+          <button onclick="location.href='landing.html';">Subscribe</button>
+        </div>
+        <p class="subscribe-small">
+          By subscribing you agree to our Privacy Policy...
+        </p>
+      </div>
+    </div>
+
+    <hr class="footer-line">
+
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <!-- Tutti a terms.html -->
+        <a href="terms.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="terms.html">Cookies Settings</a>
+      </div>
+      <!-- Niente copyright -->
+    </div>
+  </section>
+
+</body>
+</html>

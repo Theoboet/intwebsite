@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive - Home</title>
+
+  <!-- Font Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">
+      <a href="index.html" class="home-link">
+        <img src="assets/logo.svg" alt="Interactive Logo" width="40" height="40">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contacts.html">Get in Touch</a></li>
+        <li><a href="landing.html" style="font-weight:bold;">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero hero-index">
+    <div class="hero-content">
+      <!-- Titolo grande giallo -->
+      <h1 class="highlight" style="font-size:4rem;">interactive</h1>
+      <p>Designed for meaningful interactions in a small range of distance, 
+         the best option to connect with interesting people in your phone area.</p>
+      <!-- Nuovo bottone “Join us” che porta alla landing -->
+      <a href="landing.html" class="btn-join-us hero-join-btn">Join us</a>
+    </div>
+  </section>
+
+  <!-- PRIMO BLOCCO: Showcase -->
+  <section class="section-showcase">
+    <div class="showcase-container">
+      <div class="showcase-text">
+        <h2>Showcase your Digital Identity effortlessly</h2>
+        <!-- Tutto in un solo paragrafo. Ultima frase in bold, con la minuscola iniziale -->
+        <p>
+          Creating your profile allows you to display all your essential links in one convenient location. 
+          This enhances your visibility. <strong>take control of your social presence like never before.</strong>
+        </p>
+        <!-- Bottone Join => landing.html -->
+        <a href="landing.html" class="btn-join-us">Join Us</a>
+      </div>
+      <div class="showcase-image">
+        <img src="assets/phone1.png" alt="Phone screen 1">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECONDO BLOCCO: Interact -->
+  <section class="section-interact">
+    <div class="interact-container">
+      <div class="interact-text">
+        <h2>Interact and connect with people in your Area</h2>
+        <!-- Prima frase e seconda frase in un paragrafo,
+             ultima riga “Discover new connections...” in un paragrafo a parte -->
+        <p>
+          In the feed you are able to see all the people around you within 250 meters. This way, 
+          you can decide who you want to interact with or whom to send a friend request to establish initial contact.
+        </p>
+        <p>Discover new connections, explore shared interests.</p>
+
+        <!-- Bottone Join => landing.html -->
+        <a href="landing.html" class="btn-join-us">Join Us</a>
+      </div>
+      <div class="interact-image">
+        <img src="assets/phone2.png" alt="Phone screen 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY SECTION -->
+  <section class="why-section">
+    <div class="why-content">
+      <h2>Why should I use <span class="highlight">interactive</span>?</h2>
+      <p class="intro">
+        Interactive helps you connect with the people around you in a smarter and more engaging way. 
+        Discover new connections, explore shared interests, and take control of your social presence like never before.
+      </p>
+
+      <div class="use-cases">
+        <div class="use-case">
+          Let everyone on campus know <span class="highlight">you’re there</span>
+        </div>
+        <div class="use-case">
+          Know the <span class="highlight">gram</span> of that cute guy before you talk to him
+        </div>
+        <div class="use-case">
+          Find people nearby with your <span class="highlight">same interests</span> and make new friends
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCCO "COMING SOON..." -->
+  <section class="section-coming-soon">
+    <div class="coming-soon-box">
+      <div class="coming-soon-text">
+        <h1>COMING SOON...</h1>
+        <h2>Select the connections that matter most to you with tailored filters.</h2>
+        <!-- Paragrafo in minuscolo all'inizio, come nello screenshot, no bold -->
+        <p>
+          choose connections based on your preferences, ensuring you interact with the right people. 
+          With customizable filters, you can easily find and connect with individuals who share your interests and goals, 
+          in the places you frequent the most.
+        </p>
+      </div>
+      <div class="coming-soon-image">
+        <img src="assets/phone3.png" alt="Phone screen filters">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA: Join Us on This Journey -->
+  <section class="section-journey">
+    <h2>Join Us on This Journey</h2>
+    <!-- Bottone => landing.html -->
+    <a href="landing.html" class="btn-join-us">Join Us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="final-section">
+    <div class="brand-subscribe">
+      <div class="brand-block">
+        <div class="brand-icon">
+          <img src="assets/logo.svg" alt="Icon" width="60" height="60">
+        </div>
+        <div class="brand-text">
+          Interactive
+        </div>
+      </div>
+
+      <div class="subscribe-block">
+        <label for="subscribe-email">Subscribe</label>
+        <div class="subscribe-row">
+          <!-- Bottone Subscribe => landing.html -->
+          <input type="email" id="subscribe-email" placeholder="Enter your email">
+          <button onclick="location.href='landing.html';">Subscribe</button>
+        </div>
+        <p class="subscribe-small">
+          By subscribing you agree to our Privacy Policy. By subscribing you agree to our Privacy ...
+        </p>
+      </div>
+    </div>
+
+    <hr class="footer-line">
+
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <!-- Tutti i link puntano a terms.html -->
+        <a href="terms.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="terms.html">Cookies Settings</a>
+      </div>
+      <!-- Rimosso la scritta © 2024 Relume. All rights reserved. -->
+    </div>
+  </section>
+
+</body>
+</html>
+
