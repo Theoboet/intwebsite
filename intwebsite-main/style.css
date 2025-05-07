@@ -16,12 +16,18 @@ body {
   color: #fff;
   background: #1e1e1e;
   position: relative;
-  min-height: 100vh;
+}
+
+/* Main content wrapper to ensure it's above the background */
+.main-content {
+  position: relative;
+  z-index: 1;
 }
 
 /* Classe per evidenziare in giallo */
 .highlight {
   color: #FFDD1A;
+  font-weight: 600;
 }
 
 /* NAVBAR */
@@ -95,7 +101,6 @@ nav ul li a {
 /* HERO (INDEX e LANDING) */
 /* MODIFICA: min-height: 80vh per la hero index, se la usi come default */
 .hero {
-  background: url("assets/sfondo.png") no-repeat center center / cover;
   min-height: 80vh; /* da 70vh a 80vh */
   display: flex;
   align-items: center;
@@ -105,20 +110,54 @@ nav ul li a {
   padding: 4rem 2rem;
 }
 .hero-content {
-  max-width: 700px;
+  max-width: 2000px;
 }
-.hero h1 {
-  font-size: 4rem;
-  /* MODIFICA: colore highlight -> #FFDD1A */
+.hero-title {
+  font-size: 6rem;
+  font-weight: 800;
   color: #FFDD1A;
-  margin-bottom: 1rem;
-  font-weight: 600; 
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  font-weight: 400; 
+.hero-subtitle {
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.hero-highlight {
+  font-size: 33px;
+  font-weight: 600;
+  color: #FFDD1A;
+  margin-bottom: 2rem auto 0 auto;
+  text-align: center;
+}
+.hero-join-btn {
+  display: inline-block;
+  background: #FFDD1A;
+  color: #232323;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 3.5rem;
+  border-radius: 999px;
+  border: none;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  transition: filter 0.2s, background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.hero-join-btn:hover {
+  filter: brightness(1.1);
+  background: #ffe94d;
+  color: #232323;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Bottoni "Join" rotondi con testo giallo (btn-join, btn-join-us) */
@@ -214,18 +253,13 @@ nav ul li a {
 
 /* WHY SECTION (INDEX) */
 .why-section {
-  background: transparent;
+  /* background: url("assets/sfondo.png") no-repeat center center / cover; */
   color: #fff;
   padding: 4rem 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
 }
 .why-content {
-  max-width: 600px;
-  margin: 0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .why-content h2 {
   font-size: 2.2rem;
@@ -253,22 +287,16 @@ nav ul li a {
 
 /* COMING SOON */
 .section-coming-soon {
-  padding: 4rem 2rem 0 2rem;
+  padding: 4rem 2rem;
   background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 4rem;
 }
 .coming-soon-box {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  gap: 4rem;
-  align-items: flex-start;
-  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
 }
 .coming-soon-text {
   flex: 1;
@@ -289,15 +317,11 @@ nav ul li a {
 }
 .coming-soon-image {
   flex: 1;
-  text-align: left;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  text-align: center;
 }
 .coming-soon-image img {
-  max-width: 400px;
+  max-width: 900px;
   width: 100%;
-  height: auto;
 }
 
 /* SEZIONE JOURNEY */
@@ -608,51 +632,42 @@ nav ul li a {
   }
 }
 
-/* Background cards container */
+/* Animated Carte Profilo Background */
 .carte-profilo-bg {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  pointer-events: none;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
-  padding: 0 2rem;
+  pointer-events: none;
+  background: transparent;
   overflow: hidden;
-}
-
-/* Main content wrapper */
-.main-content {
-  position: relative;
-  z-index: 1;
+  padding: 0 10vw; /* Add padding to allow overflow */
+  min-width: 2000px; /* Ensure enough space for all columns */
+  margin: 0 auto;
 }
 
 /* Animation keyframes for up and down movement */
-@keyframes floatUp {
-  0%, 100% {
-    transform: translateY(300px);
+@keyframes flowUp {
+  0% {
+    transform: translateY(0);
   }
-  50% {
-    transform: translateY(-600px);
-  }
-}
-
-@keyframes floatDown {
-  0%, 100% {
-    transform: translateY(-300px);
-  }
-  50% {
-    transform: translateY(600px);
+  100% {
+    transform: translateY(-100vh);
   }
 }
 
-@keyframes floatSeamless {
-  0%   { transform: translateY(-600px); }
-  50%  { transform: translateY(300px); }
-  100% { transform: translateY(-600px); }
+@keyframes flowDown {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .carte-column {
@@ -660,22 +675,25 @@ nav ul li a {
   flex-direction: column;
   gap: 12px;
   margin-right: 12px;
-  min-height: calc(100vh + 900px); /* 600px up + 300px down + viewport */
-  height: calc(100vh + 900px);
-  justify-content: flex-start;
-  animation-name: floatSeamless;
-  animation-duration: 100s;
+  animation-duration: 80s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  position: relative;
+  flex-shrink: 0;
 }
 
 /* Apply alternating animations to columns */
 .carte-column:nth-child(odd) {
-  animation-name: floatUp;
+  animation-name: flowUp;
 }
 
 .carte-column:nth-child(even) {
-  animation-name: floatDown;
+  animation-name: flowDown;
+}
+
+/* Remove the pseudo-element since we're using a different approach */
+.carte-column::before {
+  display: none;
 }
 
 .carte {
@@ -720,4 +738,30 @@ nav ul li a {
   display: block;
   margin-bottom: 0;
   object-fit: contain;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.hero.hero-index {
+  background: url("assets/sfondo.png") no-repeat center center / cover;
+}
+
+.btn-join-us.hero-join-btn {
+  background: #FFDD1A !important;
+  color: #3c3c3c !important;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 3.5rem;
+  border-radius: 999px;
+  border: none;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  transition: filter 0.2s, background 0.2s, color 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-join-us.hero-join-btn:hover {
+  filter: brightness(1.1);
+  background: #3C3C3C !important;
+  color: #FFDD1A !important;
 }
