@@ -669,6 +669,73 @@ nav ul li a {
   .terms-content li {
     font-size: 0.95rem;
   }
+
+  /* Hide animated background on mobile for performance and layout */
+  .carte-profilo-bg {
+    display: none !important;
+  }
+  .carte-column {
+    flex-direction: row;
+    gap: 4px;
+    margin-right: 0;
+  }
+  .carte-svg {
+    width: 80px;
+    height: 120px;
+  }
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+  .hero-content {
+    padding: 1rem !important;
+    max-width: 100vw !important;
+  }
+  .hero-join-btn, .btn-join-us, .btn-join {
+    font-size: 1.1rem !important;
+    padding: 0.7rem 1.5rem !important;
+    margin: 1rem auto 0 auto !important;
+  }
+  .section-container, .section-showcase, .section-interact, .why-section, .final-section, .careers-hero, .contact-hero, .terms-container {
+    padding: 1.2rem 0.5rem !important;
+    max-width: 100vw !important;
+  }
+  .showcase-image img, .interact-image img, .coming-soon-image img, .why-phone-image img {
+    max-width: 98vw !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .careers-hero-content, .contact-hero-content {
+    padding: 0.5rem !important;
+    max-width: 100vw !important;
+  }
+  .careers-hero-content h1, .contact-hero-content h1 {
+    font-size: 1.5rem !important;
+  }
+  .careers-hero-content p, .contact-hero-content p {
+    font-size: 1rem !important;
+  }
+  .contact-info-container {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    max-width: 100vw !important;
+  }
+  .footer-bottom, .footer-links {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+  .footer-links a {
+    font-size: 1rem !important;
+  }
+  .subscribe-row {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+  .subscribe-row input[type="email"], .subscribe-row button {
+    width: 100% !important;
+    font-size: 1rem !important;
+  }
 }
 
 /* Animated Carte Profilo Background */
