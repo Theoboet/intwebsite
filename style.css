@@ -16,7 +16,7 @@ body {
   color: #fff;
   background: #1e1e1e;
   position: relative;
-  animation: fadeIn 2s ease;
+  animation: none !important;
 }
 
 @keyframes fadeIn {
@@ -45,9 +45,40 @@ header {
   z-index: 1000;
   background: #232323; /* or your navbar background color */
   display: flex;
-  align-items: center; /* Centra verticalmente logo e navbar */
+  align-items: center; 
   justify-content: space-between;
   padding: 1rem 2rem;
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Remove animations but keep specific transitions for buttons and links */
+header * {
+  animation: none !important;
+}
+
+/* Re-enable transitions for interactive elements */
+.btn-join-us, .navbar-join-btn, nav ul li a {
+  transition: background-color 0.2s, color 0.2s, filter 0.2s;
+}
+
+/* Button styles with transitions maintained */
+.navbar-join-btn, .hero-join-btn-main {
+  background: #FFDD1A !important;
+  color: #3c3c3c !important;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  transition: filter 0.2s, background 0.2s, color 0.2s;
+}
+
+/* Burger menu transition for animation */
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: transform 0.3s ease !important;
 }
 
 .logo {
@@ -423,11 +454,7 @@ nav ul li a {
   font-size: 1.1rem;
   cursor: pointer;
   transition: filter 0.2s, background 0.2s, color 0.2s;
-}
-.subscribe-row button:hover {
-  filter: brightness(1.1);
-  background: #3c3c3c;
-  color: #FFDD1A;
+
 }
 .subscribe-small {
   font-size: 0.85rem;
@@ -935,7 +962,7 @@ nav .btn-join-us {
   height: 3px;
   background-color: #fff;
   margin: 5px 0;
-  transition: 0.4s;
+  transition: transform 0.3s ease !important;
 }
 
 /* Transform the burger into an X when clicked */
@@ -965,7 +992,7 @@ nav .btn-join-us {
     height: 100vh;
     background-color: #232323;
     padding-top: 70px;
-    transition: 0.5s;
+    transition: right 0.3s ease !important;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
   }
   
