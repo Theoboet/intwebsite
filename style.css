@@ -126,6 +126,12 @@ nav ul li a {
   padding: 0.5rem;     
 }
 
+/* Add yellow hover effect for Careers and Get in Touch links */
+nav ul li a:not(.btn-join-us):hover {
+  color: #FFDD1A;
+  transition: color 0.2s ease;
+}
+
 /* ✅ MIGLIORAMENTI SU MOBILE */
 @media (max-width: 768px) {
   nav ul {
