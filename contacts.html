@@ -162,23 +162,11 @@
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 42.svg" alt="carte profilo yellow" class="carte-svg" />
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 49.svg" alt="carte profilo yellow" class="carte-svg" />
-    </div>
-    <div class="carte-column">
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 49.svg" alt="carte profilo yellow" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 51.svg" alt="carte profilo yellow" class="carte-svg" />
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
     </div>
     <div class="carte-column">
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
@@ -224,6 +212,18 @@
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 42.svg" alt="carte profilo yellow" class="carte-svg" />
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+    </div>
+    <div class="carte-column">
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+      <img src="assets/carte profilo/Group 49.svg" alt="carte profilo yellow" class="carte-svg" />
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+      <img src="assets/carte profilo/Group 51.svg" alt="carte profilo yellow" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
@@ -237,6 +237,11 @@
       <a href="index.html" class="home-link">
         <img src="assets/logo.svg" alt="Logo" width="40" height="40">
       </a>
+    </div>
+    <div class="burger-menu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
     <nav>
       <ul>
@@ -301,6 +306,33 @@
         setTimeout(() => {
           element.style.opacity = '1';
         }, 100);
+      });
+      
+      // Burger menu functionality
+      const burgerMenu = document.querySelector('.burger-menu');
+      const nav = document.querySelector('nav');
+      
+      burgerMenu.addEventListener('click', function() {
+        burgerMenu.classList.toggle('change');
+        nav.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on links
+      const navLinks = document.querySelectorAll('nav ul li a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          burgerMenu.classList.remove('change');
+          nav.classList.remove('active');
+        });
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = nav.contains(event.target) || burgerMenu.contains(event.target);
+        if (!isClickInside && nav.classList.contains('active')) {
+          burgerMenu.classList.remove('change');
+          nav.classList.remove('active');
+        }
       });
     });
   </script>
