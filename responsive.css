@@ -1,0 +1,343 @@
+/* 
+ * responsive.css
+ * Additional responsive styles for Interact website
+ */
+
+/* ==== GLOBAL RESPONSIVE STYLES ==== */
+@media (max-width: 1200px) {
+  /* Large devices adjustments */
+  .showcase-container, 
+  .interact-container,
+  .why-content {
+    gap: 8rem !important;
+  }
+}
+
+/* ==== TABLET STYLES ==== */
+@media (max-width: 992px) {
+  /* Typography adjustments */
+  .hero-title {
+    font-size: 60px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px !important;
+  }
+  
+  .hero-highlight {
+    font-size: 22px !important;
+  }
+  
+  h2[id$="-wave"] {
+    font-size: 30px !important;
+  }
+  
+  /* Layout adjustments */
+  .showcase-text, 
+  .interact-text, 
+  .why-section div[style*="flex: 1"] {
+    margin-top: 1.5rem !important;
+  }
+  
+  /* Spacing adjustments */
+  .showcase-container, 
+  .interact-container,
+  .why-content {
+    gap: 5rem !important;
+  }
+  
+  /* Image size adjustments */
+  .showcase-image img, 
+  .interact-image img {
+    max-width: 300px !important;
+  }
+  
+  .why-phone-image img {
+    max-width: 320px !important;
+  }
+  
+  /* Background animations adjustment */
+  .carte-column {
+    animation-duration: 100s;
+  }
+}
+
+/* ==== MOBILE LANDSCAPE & SMALL TABLET STYLES ==== */
+@media (max-width: 768px) {
+  /* Fix layout issues */
+  .showcase-container, 
+  .interact-container,
+  .why-content {
+    flex-direction: column;
+    gap: 3rem !important;
+    align-items: center !important;
+  }
+  
+  /* Typography adjustments */
+  .hero-title {
+    font-size: 50px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px !important;
+    padding: 0 1rem;
+  }
+  
+  .hero-highlight {
+    font-size: 20px !important;
+  }
+  
+  h2[id$="-wave"] {
+    font-size: 28px !important;
+    text-align: center;
+  }
+  
+  /* Content blocks adjustments */
+  .showcase-text, 
+  .interact-text {
+    text-align: center;
+    width: 100%;
+    padding: 0 1.5rem;
+    margin-top: 1rem !important;
+  }
+  
+  /* Improve buttons */
+  .btn-join-us, 
+  .hero-join-btn-main {
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Fix section spacing */
+  .section-showcase, 
+  .section-interact,
+  .why-section {
+    margin-bottom: 5rem !important;
+  }
+  
+  /* Make images responsive */
+  .showcase-image, 
+  .interact-image,
+  .why-phone-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .showcase-image img, 
+  .interact-image img,
+  .why-phone-image img {
+    max-width: 85% !important;
+    height: auto;
+  }
+  
+  /* Fix background on mobile */
+  .carte-profilo-bg {
+    min-width: 100vw;
+    padding: 0 2vw;
+  }
+  
+  .carte-column {
+    animation-duration: 120s; /* Slower animation on mobile */
+  }
+  
+  .carte-svg {
+    width: 60px;
+    height: auto;
+  }
+  
+  /* Extra spacing for text content */
+  #showcase-extra p,
+  #interact-extra p,
+  #why-extra p {
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  /* Footer adjustments */
+  .footer-bottom {
+    padding: 1rem;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* ==== MOBILE PORTRAIT STYLES ==== */
+@media (max-width: 576px) {
+  /* Typography fine-tuning */
+  .hero-title {
+    font-size: 40px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px !important;
+  }
+  
+  .hero-highlight {
+    font-size: 18px !important;
+  }
+  
+  h2[id$="-wave"] {
+    font-size: 24px !important;
+  }
+  
+  /* Improve spacing */
+  .showcase-container, 
+  .interact-container,
+  .why-content {
+    gap: 2.5rem !important;
+  }
+  
+  /* Smaller images on small phones */
+  .showcase-image img, 
+  .interact-image img,
+  .why-phone-image img {
+    max-width: 90% !important;
+  }
+  
+  /* Header navigation */
+  nav.active {
+    width: 85%;
+  }
+  
+  /* Contact page specific */
+  .contact-block {
+    padding: 1rem;
+  }
+  
+  .contact-block h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .contact-block p,
+  .contact-block a {
+    font-size: 1rem !important;
+  }
+  
+  /* Terms page specific */
+  .terms-container {
+    padding: 2rem 1rem;
+  }
+  
+  .terms-content h1 {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* ==== SMALL PHONE STYLES ==== */
+@media (max-width: 480px) {
+  /* Even smaller typography */
+  .hero-title {
+    font-size: 36px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 15px !important;
+  }
+  
+  .hero-highlight {
+    font-size: 17px !important;
+  }
+  
+  h2[id$="-wave"] {
+    font-size: 22px !important;
+  }
+  
+  /* Tighter spacing */
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  /* Make buttons appropriate size */
+  .btn-join-us, 
+  .hero-join-btn-main {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+  }
+  
+  /* Simplified animations */
+  .wave-text span {
+    display: inline;
+  }
+  
+  /* Optimize background animation */
+  .carte-column {
+    animation-duration: 140s; /* Even slower animation on small phones */
+  }
+  
+  .carte-svg {
+    width: 50px;
+    height: auto;
+  }
+  
+  /* Landing page subscription form */
+  .subscribe-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .subscribe-row input[type="email"],
+  .subscribe-row button {
+    width: 100%;
+  }
+  
+  /* Careers page */
+  .careers-hero-content h1 {
+    font-size: 1.7rem !important;
+  }
+  
+  .careers-hero-content p {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* ==== SPECIFIC PAGE ADJUSTMENTS ==== */
+
+/* Landing page form responsiveness */
+@media (max-width: 768px) {
+  .subscribe-block {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* Careers page adjustments */
+@media (max-width: 768px) {
+  .careers-hero-content {
+    padding: 6rem 1rem 2rem 1rem !important;
+  }
+}
+
+/* Contact page adjustments */
+@media (max-width: 768px) {
+  .contact-hero-content {
+    padding: 0 1rem;
+  }
+  
+  .contact-info-section {
+    padding: 1rem;
+  }
+  
+  .contact-info-container {
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+  }
+}
+
+/* Fix animation performance on mobile */
+@media (max-width: 768px) {
+  @keyframes waveFadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .wave-text span.in-view {
+    animation-duration: 0.01s !important;
+  }
+} 

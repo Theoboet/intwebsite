@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
   <style>
     @keyframes fadeIn {
       from {
@@ -36,152 +37,6 @@
 
     .logo img:hover {
       transform: scale(1.2);
-    }
-
-    /* Responsive Contact Blocks Styling */
-    .contact-block {
-      background-color: rgba(30, 30, 30, 0.7);
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid rgba(255, 221, 26, 0.2);
-      margin: 0 auto;
-    }
-
-    .contact-block:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-      border-color: rgba(255, 221, 26, 0.4);
-    }
-
-    .contact-block h2 {
-      font-size: 1.7rem;
-      color: #FFDD1A;
-      margin-bottom: 1rem;
-    }
-
-    .contact-block p {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-block a {
-      color: #FFDD1A;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-decoration: underline;
-      transition: color 0.2s ease;
-      display: inline-block;
-      padding: 0.3rem 0.8rem;
-      border-radius: 8px;
-      background-color: rgba(60, 60, 60, 0.5);
-    }
-
-    .contact-block a:hover {
-      color: #ffe54d;
-      background-color: rgba(60, 60, 60, 0.8);
-    }
-
-    /* Media Queries for Responsive Design */
-    @media (max-width: 768px) {
-      .contact-hero-content h1 {
-        font-size: 2rem;
-      }
-      
-      .contact-hero-content p {
-        font-size: 1rem;
-        padding: 0 1rem;
-      }
-      
-      .contact-info-container {
-        padding: 1rem;
-      }
-      
-      .contact-block {
-        padding: 1.5rem;
-        max-width: 90%;
-      }
-      
-      .contact-block h2 {
-        font-size: 1.5rem;
-      }
-      
-      .contact-block p {
-        font-size: 1rem;
-      }
-      
-      .contact-block a {
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .contact-hero-content h1 {
-        font-size: 1.8rem;
-      }
-      
-      .contact-block {
-        padding: 1.2rem;
-      }
-      
-      .contact-block h2 {
-        font-size: 1.3rem;
-      }
-      
-      .contact-block p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-      }
-      
-      .contact-block a {
-        font-size: 0.9rem;
-      }
-    }
-
-    /* Responsive Hero Section Styles */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 3.5rem !important;
-      }
-      
-      .hero-subtitle {
-        font-size: 1.1rem !important;
-        padding: 0 1rem;
-      }
-      
-      .hero-highlight {
-        font-size: 1.3rem !important;
-      }
-      
-      .hero-join-btn-main {
-        font-size: 1.2rem !important;
-        padding: 0.8rem 2rem !important;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .hero-title {
-        font-size: 2.5rem !important;
-      }
-      
-      .hero-subtitle {
-        font-size: 1rem !important;
-        padding: 0 0.5rem;
-      }
-      
-      .hero-highlight {
-        font-size: 1.1rem !important;
-      }
-      
-      .hero-join-btn-main {
-        font-size: 1rem !important;
-        padding: 0.7rem 1.8rem !important;
-      }
     }
   </style>
 </head>
@@ -287,12 +142,12 @@
     </div>
     <div class="carte-column">
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
+      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 49.svg" alt="carte profilo yellow" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
-      <img src="assets/carte profilo/Group 51.svg" alt="carte profilo yellow" class="carte-svg" />
+      <img src="assets/carte profilo/Group 42.svg" alt="carte profilo yellow" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
       <img src="assets/carte profilo/Group 48.svg" alt="carte profilo white" class="carte-svg" />
@@ -393,32 +248,13 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero hero-index" style="margin-bottom: 8rem; padding: 2rem 1rem;">
-    <div class="hero-content fade-in-up">
-      <h1 class="hero-title" style="font-size:80px; line-height: 1.2;">Interact</h1>
-      <p class="hero-subtitle" style="font-size:22px; font-weight:300; margin: 1rem auto;">A social hub designed for In-Person meaningful interactions in a small range of distance</p>
-      <p class="hero-highlight" style="font-size:24px; font-weight:550; margin: 0.5rem auto 1.5rem auto;">Connect with interesting people in your place</p>
-      <a href="landing.html" class="btn-join-us hero-join-btn-main" style="margin-top: 1rem;">Join us</a>
-    </div>
-  </section>
-
-  <!-- CONTACT INFO -->
-  <section class="contact-info-section">
-    <div class="contact-info-container fade-in" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4rem; min-height: 60vh; text-align: center; padding: 2rem 1rem;">
-      <!-- Blocco "Email" -->
-      <div class="contact-block">
-        <h2>Email</h2>
-        <p>Reach out to us for any inquiries or support.</p>
-        <a href="mailto:theoboettcher@gmail.com">theoboettcher@gmail.com</a>
-      </div>
-
-      <!-- Blocco "Phone" -->
-      <div class="contact-block">
-        <h2>Phone</h2>
-        <p>We're here to assist you with any questions.</p>
-        <a href="tel:+393937237988">+39 393 723 7988</a>
-      </div>
+  <!-- HERO SPECIFICO PER CAREERS -->
+  <section class="careers-hero">
+    <div class="careers-hero-content fade-in" style="text-align:center; align-items:center; display:flex; flex-direction:column; padding-top: 8rem;">
+      <h1>Join Our Team Today</h1>
+      <p>We're on the lookout for talented individuals to help shape the future of our platform. 
+       If you are interested in joining our team reach out:</p>
+      <a href="landing.html" class="btn-join-us hero-join-btn-main" style="margin-top: 0.5rem;">Contact us</a>
     </div>
   </section>
 
