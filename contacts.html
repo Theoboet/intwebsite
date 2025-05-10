@@ -42,6 +42,10 @@
     .contact-info-container.fade-in {
       opacity: 1;
     }
+    
+    .logo img:hover {
+      transform: scale(1.2);
+    }
   </style>
 </head>
 <body>
@@ -235,7 +239,7 @@
   <header class="fade-in">
     <div class="logo">
       <a href="index.html" class="home-link">
-        <img src="assets/logo.svg" alt="Logo" width="40" height="40">
+        <img src="assets/logo.svg" alt="Logo" width="40" height="40" style="transition: transform 0.3s ease; transform-origin: center;">
       </a>
     </div>
     <div class="burger-menu">
@@ -262,9 +266,9 @@
 
   <!-- CONTACT INFO -->
   <section class="contact-info-section">
-    <div class="contact-info-container fade-in" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 4rem; min-height: 60vh; text-align: center;">
+    <div class="contact-info-container fade-in" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4rem; min-height: 60vh; text-align: center;">
         <!-- Blocco "Email" -->
-      <div class="contact-block" style="text-align: center; max-width: 350px;">
+      <div class="contact-block" style="text-align: center; max-width: 500px;">
         <h2 style="font-size: 1.7rem; color: #FFDD1A;">Email</h2>
         <p style="font-size: 1.2rem; margin-bottom: 1rem;">Reach out to us for any inquiries or support.</p>
         <a href="mailto:theoboettcher@gmail.com" style="color: #FFDD1A; font-size: 1.2rem; text-decoration: underline;">theoboettcher@gmail.com</a>

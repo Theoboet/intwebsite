@@ -33,6 +33,10 @@
     .careers-hero-content.fade-in {
       opacity: 1;
     }
+
+    .logo img:hover {
+      transform: scale(1.2);
+    }
   </style>
 </head>
 <body>
@@ -226,7 +230,7 @@
   <header class="fade-in">
     <div class="logo">
       <a href="index.html" class="home-link">
-        <img src="assets/logo.svg" alt="Logo" width="40" height="40">
+        <img src="assets/logo.svg" alt="Logo" width="40" height="40" style="transition: transform 0.3s ease; transform-origin: center;">
       </a>
     </div>
     <div class="burger-menu">
@@ -245,11 +249,11 @@
 
   <!-- HERO SPECIFICO PER CAREERS -->
   <section class="careers-hero">
-    <div class="careers-hero-content fade-in" style="text-align:center; align-items:center; display:flex; flex-direction:column;">
+    <div class="careers-hero-content fade-in" style="text-align:center; align-items:center; display:flex; flex-direction:column; padding-top: 8rem;">
       <h1>Join Our Team Today</h1>
       <p>We're on the lookout for talented individuals to help shape the future of our platform. 
        If you are interested in joining our team reach out:</p>
-      <a href="landing.html" class="btn-join-us hero-join-btn-main">Contact us</a>
+      <a href="landing.html" class="btn-join-us hero-join-btn-main" style="margin-top: 0.5rem;">Contact us</a>
     </div>
   </section>
 
@@ -260,12 +264,14 @@
         <!-- Logo and Interactive text removed -->
       </div>
     </div>
-    <hr class="footer-line">
-    <div class="footer-bottom">
-      <div class="footer-links">
-        <a href="terms.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="terms.html">Cookies Settings</a>
+    <div style="margin-top: 10rem;">
+      <hr class="footer-line">
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="terms.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="terms.html">Cookies Settings</a>
+        </div>
       </div>
     </div>
   </section>
