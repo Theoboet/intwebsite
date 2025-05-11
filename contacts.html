@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Get in Touch - Interactive</title>
 
+  <!-- Preload background image -->
+  <link rel="preload" href="assets/sfondo.png" as="image" type="image/png">
+
   <!-- Font Inter + style.css -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
   <style>
     @keyframes fadeIn {
       from {
@@ -339,6 +341,20 @@
           nav.classList.remove('active');
         }
       });
+    });
+
+    // For progressive loading of the background image
+    window.addEventListener('load', function() {
+      // Create a new image object
+      const img = new Image();
+      
+      // When the image loads, add a class to the body
+      img.onload = function() {
+        document.body.classList.add('bg-loaded');
+      };
+      
+      // Set the source to start loading
+      img.src = 'assets/sfondo.png';
     });
   </script>
 </body>

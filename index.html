@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home</title>
 
+  <!-- Preload background image -->
+  <link rel="preload" href="assets/sfondo.png" as="image" type="image/png">
+
   <!-- Font Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +15,6 @@
 
   <!-- Foglio di stile -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
   <style>
     .logo img:hover {
       transform: scale(1.2);
@@ -272,7 +274,7 @@
           <span class="nowrap"><span>p</span><span>e</span><span>o</span><span>p</span><span>l</span><span>e</span></span><span> </span>
           <span>i</span><span>n</span><span> </span>
           <span>y</span><span>o</span><span>u</span><span>r</span><span> </span>
-          <span class="nowrap"><span>A</span><span>r</span><span>e</span><span>a<span>.</span></span>
+          <span class="nowrap"><span>A</span><span>r</span><span>e</span><span>a</span></span>
         </h2>
         <div id="interact-extra" style="opacity:0; transition: opacity 2.5s;">
           <p><span class="highlight">In the feed you are able to see all the people around you within 250 meters.</span> This way, you can decide who you want to interact with or whom to send a friend request to establish initial contact. <span class="highlight">Discover new connections, in the places you frequent the most.</span></p>
@@ -444,6 +446,20 @@
           nav.classList.remove('active');
         }
       });
+    });
+
+    // For progressive loading of the background image
+    window.addEventListener('load', function() {
+      // Create a new image object
+      const img = new Image();
+      
+      // When the image loads, add a class to the body
+      img.onload = function() {
+        document.body.classList.add('bg-loaded');
+      };
+      
+      // Set the source to start loading
+      img.src = 'assets/sfondo.png';
     });
   </script>
 </body>
